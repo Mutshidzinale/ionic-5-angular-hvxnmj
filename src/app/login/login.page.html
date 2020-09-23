@@ -1,0 +1,67 @@
+<ion-header>
+  <div class = "bar bar-header">
+   <h1 class = "title">Welcome to Atlanta Task management portal</h1>
+</div>
+  <ion-toolbar>
+    <ion-title>
+      Login
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form >
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">EMail Address</ion-label>
+              <ion-input
+                type="email"
+                ngModel
+                name="email"
+                required
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input
+                type="password"
+                ngModel
+                name="password"
+                required
+                minlength="6"
+              
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+
+          <ion-button
+            type="submit"
+            color="primary"
+            (click)="onLogin()"
+            expand="block"
+      
+          >
+            Login
+          </ion-button>
+          <label class = "checkbox">
+   <input type = "checkbox"> Remember me
+</label>
+         <p text-center>Don't have a account?</p>
+         <ion-button expand="full" color="danger" (click)="onRegister()">Register</ion-button>
+          <label>
+    Forgot <a href="#">password?</a>
+</label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+
+</ion-content>
